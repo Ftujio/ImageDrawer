@@ -1,6 +1,6 @@
 #wrapper{
 	width: 1200px;
-	margin: 0px auto;
+	margin: 5px auto;
 }
 
 h1{
@@ -36,4 +36,8 @@ h1{
 .tool{
 	height: 50px;
 	border-bottom: 3px solid gray;
+}
+
+#logo{
+	width: 8%;
 }
