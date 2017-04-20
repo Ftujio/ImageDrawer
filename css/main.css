@@ -17,7 +17,7 @@ h1{
 
 #tools-toolbar{
 	display: inline-block;
-	width: 30px;
+	width: 50px;
 	height: 100%;
 	float: left;
 
@@ -35,4 +35,7 @@ h1{
 
 .tool{
 	height: 30px;
+	padding: 10px;
+
+	border-bottom: 2px solid gray;
 }
