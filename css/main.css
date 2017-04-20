@@ -17,7 +17,7 @@ h1{
 
 #tools-toolbar{
 	display: inline-block;
-	width: 50px;
+	width: 30px;
 	height: 100%;
 	float: left;
 
@@ -34,10 +34,5 @@ h1{
 }
 
 .tool{
-	height: 50px;
-	border-bottom: 3px solid gray;
-}
-
-#logo{
-	width: 8%;
+	height: 30px;
 }
