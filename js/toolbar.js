@@ -6,6 +6,13 @@ for(let i = 0; i < toolNum; i++){
 	elem[i].addEventListener("click", function(e){ setCurrentTool(e, i) });
 }
 
+function drawPoint(x, y, radius){
+	c.beginPath();
+	c.arc(x, y, 10, 0, 2*Math.PI);
+	c.fill();
+	c.stroke();
+}
+
 function brush(e){
 	let dragging = false;
 
@@ -51,11 +58,4 @@ function setCurrentTool(e, i){
 		default:
 			brush();
 	}
-}
-
-function drawPoint(x, y, radius){
-	c.beginPath();
-	c.arc(x, y, 10, 0, 2*Math.PI);
-	c.fill();
-	c.stroke();
 }
