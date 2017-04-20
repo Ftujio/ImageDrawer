@@ -6,7 +6,5 @@ for(let i = 0; i < toolNum; i++){
 }
 
 function setCurrentTool(e, i){
-	console.log(e);
-
-	//console.log("tool ", elem[i], " clicked");
+	
 }
