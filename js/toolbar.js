@@ -40,7 +40,10 @@ canvas.addEventListener("click", function(e){
 function brush(e){
 	let x = e.offsetX;
 	let y = e.offsetY;
-	
+	c.beginPath();
+	c.arc(x, y, 50, 0, 2*Math.PI);
+	c.fill();
+	c.stroke();
 }
 
 function setCurrentTool(e, i){
