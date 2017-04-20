@@ -6,13 +6,42 @@ for(let i = 0; i < toolNum; i++){
 	elem[i].addEventListener("click", function(e){ setCurrentTool(e, i) });
 }
 
-canvas.addEventListener("click", function(){
+canvas.addEventListener("click", function(e){
 	console.log('using ', currentTool);
 
-	if(currentTool == 'brush'){
-		
+	switch(currentTool){
+		case 'line':
+			line(e);
+			break;
+		case 'circle':
+			circle(e);
+			break;
+		case 'square':
+			square(e);
+			break;
+		case 'eraser':
+			eraser(e);
+			break;
+		case 'undo':
+			undo(e);
+			break;
+		case 'bin':
+			bin(e);
+			break;
+		case 'save':
+			save(e);
+			break;
+		default:
+			brush(e);
+			console.log('Brush');
 	}
 });
+
+function brush(e){
+	let x = e.offsetX;
+	let y = e.offsetY;
+	
+}
 
 function setCurrentTool(e, i){
 	currentTool = elem[i].id;
