@@ -38,9 +38,11 @@ switch(currentTool){
 function brush(e){
 	let dragging = false;
 
-	canvas.addEventListener("click", function(e){
-		drawPoint(e.offsetX, e.offsetY, 10);
+	canvas.addEventListener("mousedown", function(e){ dragging = true });
+	canvas.addEventListener("mousemove", function(e){
+		if(dragging) drawPoint(e.offsetX, e.offsetY, 10);
 	});
+	canvas.addEventListener("mouseup", function(e){ dragging = false });
 }
 
 function setCurrentTool(e, i){
