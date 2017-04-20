@@ -2,6 +2,7 @@
 	width: 8%;
 }
 
-#brush{
-	width: 75%;
+.tool-icon{
+	width: 30px;
+	height: 30px;
 }
