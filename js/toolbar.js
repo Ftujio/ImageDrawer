@@ -32,7 +32,6 @@ switch(currentTool){
 		break;
 	default:
 		brush();
-		console.log('Brush');
 }
 
 function brush(e){
