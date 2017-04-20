@@ -36,15 +36,21 @@ switch(currentTool){
 }
 
 function brush(e){
+	let dragging = false;
+
 	canvas.addEventListener("click", function(e){
-		c.beginPath();
-		c.arc(e.offsetX, e.offsetY, 10, 0, 2*Math.PI);
-		c.fill();
-		c.stroke();
+		drawPoint(e.offsetX, e.offsetY, 10);
 	});
 }
 
 function setCurrentTool(e, i){
 	currentTool = elem[i].id;
 	console.log(elem[i].id ,' tool selected');
+}
+
+function drawPoint(x, y, radius){
+	c.beginPath();
+	c.arc(x, y, 10, 0, 2*Math.PI);
+	c.fill();
+	c.stroke();
 }
