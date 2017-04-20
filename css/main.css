@@ -1,5 +1,39 @@
 #wrapper{
-	background: lightblue;
 	width: 1200px;
 	margin: 0px auto;
+}
+
+h1{
+	font-size: 25px;
+}
+
+#editor-container{
+	margin-top: 15px;
+	height: 500px;
+	overflow: hidden;
+	border: 3px solid gray;
+	border-radius: 5px;
+}
+
+#tools-toolbar{
+	display: inline-block;
+	width: 50px;
+	height: 100%;
+	float: left;
+
+	background-color: lightgray;
+	border-right: 3px solid gray;
+}
+
+#canvas{
+	display: inline-block;
+	height: 100%;
+	float: left;
+
+	
+}
+
+.tool{
+	height: 50px;
+	border-bottom: 3px solid gray;
 }
