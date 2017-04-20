@@ -6,34 +6,6 @@ for(let i = 0; i < toolNum; i++){
 	elem[i].addEventListener("click", function(e){ setCurrentTool(e, i) });
 }
 
-console.log('using ', currentTool);
-
-switch(currentTool){
-	case 'line':
-		line();
-		break;
-	case 'circle':
-		circle();
-		break;
-	case 'square':
-		square();
-		break;
-	case 'eraser':
-		eraser();
-		break;
-	case 'undo':
-		undo();
-		break;
-	case 'bin':
-		bin();
-		break;
-	case 'save':
-		save();
-		break;
-	default:
-		brush();
-}
-
 function brush(e){
 	let dragging = false;
 
@@ -46,9 +18,39 @@ function brush(e){
 	canvas.addEventListener("mouseup", function(e){ dragging = false });
 }
 
+function line(e){
+	
+}
+
 function setCurrentTool(e, i){
 	currentTool = elem[i].id;
 	console.log(elem[i].id ,' tool selected');
+
+	switch(currentTool){
+		case 'line':
+			line();
+			break;
+		case 'circle':
+			circle();
+			break;
+		case 'square':
+			square();
+			break;
+		case 'eraser':
+			eraser();
+			break;
+		case 'undo':
+			undo();
+			break;
+		case 'bin':
+			bin();
+			break;
+		case 'save':
+			save();
+			break;
+		default:
+			brush();
+	}
 }
 
 function drawPoint(x, y, radius){
