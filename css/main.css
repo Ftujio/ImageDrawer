@@ -7,7 +7,7 @@
 	margin-top: 15px;
 	height: 500px;
 	overflow: hidden;
-	border: 2px solid gray;
+	border: 2px solid #d9d9d9;
 	border-radius: 5px;
 }
 
@@ -17,8 +17,8 @@
 	height: 100%;
 	float: left;
 
-	background-color: lightgray;
-	border-right: 3px solid gray;
+	background-color: #f2f2f2;
+	border-right: 3px solid #d9d9d9;
 }
 
 #canvas{
@@ -33,5 +33,5 @@
 	height: 30px;
 	padding: 10px;
 
-	border-bottom: 2px solid gray;
+	border-bottom: 2px solid #d9d9d9;
 }
