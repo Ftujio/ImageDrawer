@@ -26,11 +26,11 @@ var disengage = function(){
 function drawPath(x, y, radius){	
 	if(dragging){
 		c.lineTo(x, y);
-		c.strokeStyle = "black";
+		c.strokeStyle = color;
 		c.stroke();
 		c.beginPath();
 		c.arc(x, y, radius, 0, 2*Math.PI);
-		c.fillStyle = "black";
+		c.fillStyle = color;
 		c.fill();
 		c.beginPath();
 		c.moveTo(x, y);
