@@ -5,24 +5,12 @@ c.lineWidth = 10*2;
 
 let dragging = false;
 
-for(let i = 0; i < toolNum; i++){
+for(let i = 0; i < toolNum - 1; i++){
 	elem[i].addEventListener("click", function(e){ setCurrentTool(i) });
 }
 
-function drawPath(x, y, radius){	
-	if(dragging){
-		c.lineTo(x, y);
-		c.stroke();
-		c.beginPath();
-		c.arc(x, y, radius, 0, 2*Math.PI);
-		c.fill();
-		c.beginPath();
-		c.moveTo(x, y);
-	}
-}
-
 function brush(){
-	canvas.addEventListener("click", function(e){ drawPath(e.offsetX, e.offsetY, 10) });
+	//canvas.addEventListener("click", function(e){ drawPath(e.offsetX, e.offsetY, 10) });
 
 	canvas.addEventListener("mousedown", engage);
 	canvas.addEventListener("mousemove", down);
@@ -40,6 +28,20 @@ var engage = function(){
 var disengage = function(){
 	dragging = false;
 	c.beginPath();
+}
+
+function drawPath(x, y, radius){	
+	if(dragging){
+		c.lineTo(x, y);
+		c.strokeStyle = "black";
+		c.stroke();
+		c.beginPath();
+		c.arc(x, y, radius, 0, 2*Math.PI);
+		c.fillStyle = "black";
+		c.fill();
+		c.beginPath();
+		c.moveTo(x, y);
+	}
 }
 
 function line(){
@@ -84,9 +86,6 @@ function setCurrentTool(i){
 			break;
 		case 'bin':
 			bin();
-			break;
-		case 'save':
-			save();
 			break;
 		default:
 			//var a = c.cloneNode(true);
