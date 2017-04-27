@@ -25,10 +25,12 @@ function brush(){
 	canvas.addEventListener("click", function(e){ drawPath(e.offsetX, e.offsetY, 10) });
 
 	canvas.addEventListener("mousedown", engage);
-	canvas.addEventListener("mousemove", function(e){
-		drawPath(e.offsetX, e.offsetY, 10);
-	});
+	canvas.addEventListener("mousemove", down);
 	canvas.addEventListener("mouseup", disengage); 
+}
+
+var down = function(e){
+	drawPath(e.offsetX, e.offsetY, 10);
 }
 
 var engage = function(){
@@ -50,6 +52,12 @@ function line(){
 		c.stroke();
 		console.log("offsetX: ", e.offsetX, " offsetY: ", e.offsetY);
 	});
+}
+
+function removeEventListeners(){
+	canvas.removeEventListener("mousedown", engage);
+	canvas.removeEventListener("", );
+	canvas.removeEventListener("mouseup", disengage);
 }
 
 function setCurrentTool(i){
