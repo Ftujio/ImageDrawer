@@ -10,8 +10,6 @@ for(let i = 0; i < toolNum - 1; i++){
 }
 
 function brush(){
-	//canvas.addEventListener("click", function(e){ drawPath(e.offsetX, e.offsetY, 10) });
-
 	canvas.addEventListener("mousedown", engage);
 	canvas.addEventListener("mousemove", down);
 	canvas.addEventListener("mouseup", disengage); 
@@ -19,6 +17,10 @@ function brush(){
 
 var down = function(e){
 	drawPath(e.offsetX, e.offsetY, 10);
+}
+
+var point = function(e){
+	drawPoint(e.offsetX, e.offsetY, 10);
 }
 
 var engage = function(){
@@ -42,6 +44,16 @@ function drawPath(x, y, radius){
 		c.beginPath();
 		c.moveTo(x, y);
 	}
+}
+
+function drawPoint(x, y, radius){
+	c.beginPath();
+	c.arc(x, y, radius, 0, 2*Math.PI);
+	c.fillStyle = "black";
+	c.fill();
+	c.strokeStyle = "black";
+	c.stroke();
+	c.beginPath();
 }
 
 function line(){
