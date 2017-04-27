@@ -1,3 +1,6 @@
+c.lineCap = "round";
+c.lineWidth = 10;
+
 function line(){
 	removeEventListeners();
 
