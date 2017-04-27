@@ -43,6 +43,8 @@ var disengage = function(){
 }
 
 function line(){
+	removeEventListeners();
+
 	canvas.addEventListener("mousedown", function(e){ 
 		c.moveTo(e.offsetX,e.offsetY) 
 		console.log("offsetX: ", e.offsetX, " offsetY: ", e.offsetY);
@@ -56,8 +58,7 @@ function line(){
 
 function removeEventListeners(){
 	canvas.removeEventListener("mousedown", engage);
-	canvas.removeEventListener("", );
-	
+	canvas.removeEventListener("mousemove", down);
 	canvas.removeEventListener("mouseup", disengage);
 }
 
