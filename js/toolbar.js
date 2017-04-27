@@ -50,15 +50,6 @@ function line(){
 		c.stroke();
 		console.log("offsetX: ", e.offsetX, " offsetY: ", e.offsetY);
 	});
-	
-	
-	/*
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.moveTo(0,0);
-	ctx.lineTo(200,100);
-	ctx.stroke();
-	*/
 }
 
 function setCurrentTool(i){
