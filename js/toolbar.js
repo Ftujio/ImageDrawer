@@ -57,6 +57,7 @@ function line(){
 function removeEventListeners(){
 	canvas.removeEventListener("mousedown", engage);
 	canvas.removeEventListener("", );
+	
 	canvas.removeEventListener("mouseup", disengage);
 }
 
