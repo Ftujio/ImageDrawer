@@ -1,28 +1,43 @@
 let toolNum = document.getElementById("tools-toolbar").children[0].childElementCount;
 let elem = document.getElementById("tools-toolbar").children[0].children;
 var currentTool = 'brush';
+c.lineWidth = 10*2;
+
+let dragging = false;
 
 for(let i = 0; i < toolNum; i++){
 	elem[i].addEventListener("click", function(e){ setCurrentTool(i) });
 }
 
-function drawPoint(x, y, radius){
-	c.beginPath();
-	c.arc(x, y, 10, 0, 2*Math.PI);
-	c.fill();
-	c.stroke();
+function drawPath(x, y, radius){	
+	if(dragging){
+		c.lineTo(x, y);
+		c.stroke();
+		c.beginPath();
+		c.arc(x, y, radius, 0, 2*Math.PI);
+		c.fill();
+		c.beginPath();
+		c.moveTo(x, y);
+	}
 }
 
 function brush(){
-	let dragging = false;
+	canvas.addEventListener("click", function(e){ drawPath(e.offsetX, e.offsetY, 10) });
 
-	canvas.addEventListener("click", function(e){ drawPoint(e.offsetX, e.offsetY, 10) });
-
-	canvas.addEventListener("mousedown", function(e){ dragging = true });
+	canvas.addEventListener("mousedown", engage);
 	canvas.addEventListener("mousemove", function(e){
-		if(dragging) drawPoint(e.offsetX, e.offsetY, 10);
+		drawPath(e.offsetX, e.offsetY, 10);
 	});
-	canvas.addEventListener("mouseup", function(e){ dragging = false });
+	canvas.addEventListener("mouseup", disengage); 
+}
+
+var engage = function(){
+	dragging = true;
+}
+
+var disengage = function(){
+	dragging = false;
+	c.beginPath();
 }
 
 function line(){
@@ -73,6 +88,8 @@ function setCurrentTool(i){
 			save();
 			break;
 		default:
+			//var a = c.cloneNode(true);
+			//c.parentNode.replaceChild(a, c);
 			brush();
 	}
 }
