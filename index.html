@@ -12,7 +12,7 @@
 		<img src="img/logo.png" id="logo">
 
 		<div id="editor-container">
-			<div id="tools-toolbar">
+			<div class="tools-toolbar right-border">
 				<ul>
 					<li class="tool" id="brush"><img src="img/paintbrush.png" class="tool-icon"></li>
 					<li class="tool" id="line"><img src="img/diag-line.png" class="tool-icon"></li>
@@ -25,7 +25,14 @@
 				</ul>
 			</div>
 
-			<canvas id="canvas" width="1142" height="500"></canvas>
+			<canvas id="canvas" width="1000" height="500"></canvas>
+
+			<div class="tools-toolbar left-border">
+				<ul>
+					<li class="tool"></li>
+					<li class="tool"></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -33,5 +40,7 @@
 	<script type="text/javascript" src="js/toolbar.js"></script>
 	<script type="text/javascript" src="js/brush.js"></script>
 	<script type="text/javascript" src="js/line.js"></script>
+	<script type="text/javascript" src="js/save.js"></script>
+	<script type="text/javascript" src="js/side-toolbar.js"></script>
 </body>
 </html>

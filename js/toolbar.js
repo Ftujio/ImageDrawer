@@ -1,5 +1,5 @@
-let toolNum = document.getElementById("tools-toolbar").children[0].childElementCount;
-let elem = document.getElementById("tools-toolbar").children[0].children;
+let toolNum = document.getElementsByClassName("tools-toolbar")[0].children[0].childElementCount;
+let elem = document.getElementsByClassName("tools-toolbar")[0].children[0].children;
 var currentTool = 'brush';
 c.lineWidth = 10*2;
 
