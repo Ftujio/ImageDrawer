@@ -7,6 +7,7 @@ function line(){
 	});
 	canvas.addEventListener("mouseup", function(e){ 
 		c.lineTo(e.offsetX, e.offsetY);
+		c.strokeStyle = color;
 		c.stroke();
 		console.log("offsetX: ", e.offsetX, " offsetY: ", e.offsetY);
 	});
