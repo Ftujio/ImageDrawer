@@ -1,5 +1,6 @@
 c.lineCap = "round";
 c.lineWidth = 10;
+console.log(canvas);
 
 function line(){
 	removeEventListeners();
