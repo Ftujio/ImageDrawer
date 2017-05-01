@@ -11,7 +11,7 @@ function line(){
 var first = function(e){
 	c.beginPath();
 	c.moveTo(e.offsetX,e.offsetY) 
-	console.log("offsetX: ", e.offsetX, " offsetY: ", e.offsetY);
+	console.log("[Line Tool]: First point: (", e.offsetX, ", ", e.offsetY, ")");
 }
 
 var second = function(e){
@@ -19,5 +19,5 @@ var second = function(e){
 	c.strokeStyle = color;
 	c.stroke();
 	c.closePath();
-	console.log("offsetX: ", e.offsetX, " offsetY: ", e.offsetY);
+	console.log("[Line Tool]: Second point: (", e.offsetX, ", ", e.offsetY, ")");
 }
