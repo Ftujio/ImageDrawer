@@ -11,10 +11,13 @@ function removeEventListeners(){
 	canvas.removeEventListener("mousedown", engage);
 	canvas.removeEventListener("mousemove", down);
 	canvas.removeEventListener("mouseup", disengage);
-	canvas.removeEventListener("click", point);
+
+	canvas.removeEventListener("mousedown", engage2);
+	canvas.removeEventListener("mousemove", down2);
+	canvas.removeEventListener("mouseup", disengage2);
 
 	canvas.removeEventListener("mousedown", first);
-	canvas.removeEventListener("mousemove", lineGhost);
+	//canvas.removeEventListener("mousemove", lineGhost);
 	canvas.removeEventListener("mouseup", second);
 }
 
