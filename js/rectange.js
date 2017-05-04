@@ -47,7 +47,7 @@ var two = function(e){
 	c.stroke();
 	c.fillStyle = "white";
 	c.fill();
-	c.endPath();
+	c.beginPath();
 
 	console.log("Created a square on coordinates: (", x1, ", ", y1, ") with dimensions: (", width, ", ", height, ")");
 }

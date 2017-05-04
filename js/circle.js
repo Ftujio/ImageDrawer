@@ -12,5 +12,5 @@ let drawCircle = function(e){
 	c.stroke();
 	c.fillStyle = "white";
 	c.fill();
-	c.endPath();
+	c.beginPath();
 }
