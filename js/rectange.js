@@ -41,9 +41,13 @@ var two = function(e){
 		y2 = temp;
 	}
 
+	c.beginPath();
 	c.rect(x1, y1, width, height);
 	c.strokeStyle = color;
 	c.stroke();
+	c.fillStyle = "white";
+	c.fill();
+	c.endPath();
 
 	console.log("Created a square on coordinates: (", x1, ", ", y1, ") with dimensions: (", width, ", ", height, ")");
 }
