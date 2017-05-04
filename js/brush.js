@@ -1,6 +1,8 @@
 let dragging = false;
 
 function brush(){
+	removeEventListeners();
+	
 	canvas.addEventListener("mousedown", engage);
 	canvas.addEventListener("mousemove", down);
 	canvas.addEventListener("mouseup", disengage);
@@ -31,7 +33,7 @@ var disengage = function(){
 function drawPath(x, y, radius){	
 	if(dragging){
 		c.lineTo(x, y);
-		c.strokeStyle =  color;
+		c.strokeStyle = color;
 		c.lineWidth = 20;
 		c.stroke();
 		c.beginPath();
