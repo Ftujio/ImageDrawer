@@ -1,8 +1,6 @@
 function bin(){
 	removeEventListeners();
 
-	var clone = canvas.cloneNode(true);
-	canvas.parentNode.replaceChild(clone, canvas);
-
-	c = canvas.getContext("2d");
+	c.fillStyle = "white";
+	c.fillRect(0, 0, canvas.width, canvas.height);
 }
