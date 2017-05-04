@@ -46,8 +46,6 @@ function setCurrentTool(i){
 			bin();
 			break;
 		default:
-			//var a = c.cloneNode(true);
-			//c.parentNode.replaceChild(a, c);
 			brush();
 	}
 }
