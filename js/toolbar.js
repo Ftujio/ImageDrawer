@@ -37,7 +37,7 @@ function setCurrentTool(i){
 			circle();
 			break;
 		case 'square':
-			square();
+			rectange();
 			break;
 		case 'eraser':
 			eraser();
