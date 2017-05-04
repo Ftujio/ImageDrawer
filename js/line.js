@@ -33,6 +33,6 @@ var second = function(e){
 	c.lineTo(e.offsetX, e.offsetY);
 	c.strokeStyle = color;
 	c.stroke();
-	c.closePath();
+	c.beginPath();
 	console.log("[Line Tool]: Second point: (", e.offsetX, ", ", e.offsetY, ")");
 }
