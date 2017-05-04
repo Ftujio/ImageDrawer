@@ -2,7 +2,7 @@ let dragging2 = false;
 
 function eraser(){
 	removeEventListeners();
-	c.lineWidth = 20;
+	c.lineWidth = 50;
 
 	canvas.addEventListener("mousedown", engage2);
 	canvas.addEventListener("mousemove", down2);
