@@ -1,9 +1,9 @@
 c.lineCap = "round";
-c.lineWidth = 10;
 var a;
 
 function line(){
 	removeEventListeners();
+	c.lineWidth = 10;
 
 	canvas.addEventListener("mousedown", first);
 	//canvas.addEventListener("mousemove", lineGhost);

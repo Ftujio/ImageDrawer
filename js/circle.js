@@ -1,7 +1,6 @@
-c.lineWidth = 5;
-
 function circle(){
 	removeEventListeners();
+	c.lineWidth = 5;
 
 	canvas.addEventListener("click", drawCircle);
 }

@@ -2,6 +2,7 @@ let dragging = false;
 
 function brush(){
 	removeEventListeners();
+	c.lineWidth = 20;
 
 	canvas.addEventListener("mousedown", engage);
 	canvas.addEventListener("mousemove", down);
@@ -25,7 +26,6 @@ function drawPath(x, y, radius){
 	if(dragging){
 		c.lineTo(x, y);
 		c.strokeStyle = color;
-		c.lineWidth = 20;
 		c.stroke();
 		c.beginPath();
 		c.arc(x, y, radius, 0, 2*Math.PI);
