@@ -3,8 +3,17 @@ let elem = document.getElementsByClassName("tools-toolbar")[0].children[0].child
 var currentTool = 'brush';
 c.lineWidth = 10*2;
 
+setToolBGColor();
+
 for(let i = 0; i < toolNum - 1; i++){
 	elem[i].addEventListener("click", function(e){ setCurrentTool(i) });
+	elem[i].style.backgroundColor = "#f2f2f2";
+}
+
+function setToolBGColor(){
+	for(let i = 0; i < toolNum - 1; i++){
+		elem[i].style.backgroundColor = "#f2f2f2";
+	}
 }
 
 function removeEventListeners(){
@@ -28,6 +37,8 @@ function removeEventListeners(){
 function setCurrentTool(i){
 	currentTool = elem[i].id;
 	console.log(elem[i].id ,' tool selected');
+	setToolBGColor();
+	elem[i].style.backgroundColor = "#d9d9d9";
 
 	switch(currentTool){
 		case 'line':
