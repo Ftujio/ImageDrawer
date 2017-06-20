@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ftujio/ImageDrawer/issues"
   },
-  "homepage": "https://github.com/Ftujio/ImageDrawer#readme"
+  "homepage": "https://github.com/Ftujio/ImageDrawer#readme",
+  "dependencies": {
+    "electron": "^1.6.11"
+  }
 }
