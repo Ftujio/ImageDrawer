@@ -1,0 +1,19 @@
+{
+  "name": "imagedrawer",
+  "version": "0.0.1",
+  "description": "Desktop image drawing app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ftujio/ImageDrawer.git"
+  },
+  "author": "Ftujio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ftujio/ImageDrawer/issues"
+  },
+  "homepage": "https://github.com/Ftujio/ImageDrawer#readme"
+}
