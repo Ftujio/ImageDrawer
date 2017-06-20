@@ -1,10 +1,10 @@
-import { ImageDrawerPage } from './app.po';
+import { Angular2Page } from './app.po';
 
-describe('image-drawer App', () => {
-  let page: ImageDrawerPage;
+describe('angular2 App', () => {
+  let page: Angular2Page;
 
   beforeEach(() => {
-    page = new ImageDrawerPage();
+    page = new Angular2Page();
   });
 
   it('should display message saying app works', () => {

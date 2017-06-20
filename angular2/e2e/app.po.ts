@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class ImageDrawerPage {
+export class Angular2Page {
   navigateTo() {
     return browser.get('/');
   }
