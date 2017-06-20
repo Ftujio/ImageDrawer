@@ -18,5 +18,6 @@
   "homepage": "https://github.com/Ftujio/ImageDrawer#readme",
   "dependencies": {
     "electron": "^1.6.11"
-  }
+  },
+  "devDependencies": {}
 }
