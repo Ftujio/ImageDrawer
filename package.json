@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Ftujio/ImageDrawer#readme",
   "dependencies": {
     "electron": "^1.6.11"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.1.2"
   }
 }
