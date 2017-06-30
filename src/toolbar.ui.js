@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(() => {
 	let toolbar = [
 		{
 			"name": "brush",
@@ -29,4 +29,11 @@ $(document).ready(function(){
 			"icon-src": ""
 		}
 	];
+
+	$('#side-toolbar').append('<ul class="toolbar"></ul>');
+
+	for(let i = 0; i < toolbar.length; i++){
+		let elem = $('<li></li>').text(toolbar[i].name);
+		$('#side-toolbar .toolbar').append(elem);
+	}
 });
