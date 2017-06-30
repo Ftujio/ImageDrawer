@@ -4,9 +4,7 @@
   "description": "Desktop image drawing app",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "build": "cd ./angular2 && ng build --base-href ./",
-    "s": "npm run build && npm start"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
