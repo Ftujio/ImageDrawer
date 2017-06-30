@@ -20,7 +20,8 @@
   "homepage": "https://github.com/Ftujio/ImageDrawer#readme",
   "dependencies": {
     "electron": "^1.6.11",
-    "jquery": "^2.2.4"
+    "jquery": "^2.2.4",
+    "paper": "^0.11.4"
   },
   "devDependencies": {}
 }
