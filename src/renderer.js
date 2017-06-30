@@ -1,3 +1,3 @@
 console.log('app loaded');
 
-require('./src/menu.ui');
+require('./src/toolbar.ui');
