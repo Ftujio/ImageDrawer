@@ -1,4 +1,8 @@
 $(document).ready(() => {
+	sideToobarSetup();
+});
+
+function sideToobarSetup(){
 	let toolbar = [
 		{
 			"name": "brush",
@@ -36,4 +40,4 @@ $(document).ready(() => {
 		let elem = $('<li></li>').text(toolbar[i].name);
 		$('#side-toolbar .toolbar').append(elem);
 	}
-});
+}
